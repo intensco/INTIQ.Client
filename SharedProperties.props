@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<PropertyGroup>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<FileVersion>1.0.0</FileVersion>
+		<Version>1.0.0</Version>
+		<Authors>INTENS Corporation s.r.o.</Authors>
+		<Owners>INTENS Corporation s.r.o.</Owners>
+		<Description>Client library for integrating devices and systems to INTIQ's ecosystem</Description>
+		<InformationalVersion>1.0.0.0@githash@unixtimestamp</InformationalVersion>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<NoWarn>1591;1574;1573;0419;1723;1587;NU1603</NoWarn>
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeSource>True</IncludeSource>
+		<PackageOutputPath>../Build/$(Configuration)</PackageOutputPath>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<TargetFramework>net8.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>false</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="8.0.0" PrivateAssets="All"/>
+	</ItemGroup>
+
+</Project>

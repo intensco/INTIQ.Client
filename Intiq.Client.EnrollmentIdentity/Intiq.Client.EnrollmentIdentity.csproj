@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\SharedProperties.props" />
+	<PropertyGroup>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.27.1" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.63.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.63.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.64.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+		<PackageReference Include="Polly" Version="8.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Intiq.Client.EnrollmentIdentity.Cryptography\Intiq.Client.EnrollmentIdentity.Cryptography.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\Protos\intiq\shared\common\v1\common.proto" ProtoRoot="..\Protos\intiq" GrpcServices="None">
+			<Link>Protos\Shared\common.proto</Link>
+		</Protobuf>
+		<Protobuf Include="..\Protos\intiq\system_gateways\enrollment_authority\encrypted\v2\encrypted.proto" ProtoRoot="..\Protos\intiq" GrpcServices="None">
+			<Link>Protos\EnrollmentAuthority\encrypted.proto</Link>
+		</Protobuf>
+		<Protobuf Include="..\Protos\intiq\system_gateways\enrollment_authority\common\v2\common.proto" ProtoRoot="..\Protos\intiq" GrpcServices="None">
+			<Link>Protos\EnrollmentAuthority\common.proto</Link>
+		</Protobuf>
+		<Protobuf Include="..\Protos\intiq\system_gateways\enrollment_authority\authority\v2\authority.proto" ProtoRoot="..\Protos\intiq" GrpcServices="None">
+			<Link>Protos\EnrollmentAuthority\authority.proto</Link>
+		</Protobuf>
+		<Protobuf Include="..\Protos\intiq\system_gateways\enrollment_authority\authority\v2\authority_api.proto" ProtoRoot="..\Protos\intiq" GrpcServices="Client">
+			<Link>Protos\EnrollmentAuthority\authority_api.proto</Link>
+		</Protobuf>
+	</ItemGroup>
+
+</Project>
